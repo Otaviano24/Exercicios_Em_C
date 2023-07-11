@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
-
+//Função para limpar a tela
 void limparTela()
 {
 	system("cls");
 }
+//Função de cálculo do imc
 float IMC(float *peso, float *altura)
 {
 	float imc = *peso / (*altura * *altura);
