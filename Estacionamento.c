@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
-// Função para calcular as taxas de estacionamento
+//-----FunÃ§Ã£o para calcular as taxas de estacionamento------------
 float calculaTaxas(float hEstacionado) {
-    float taxa = 2.0;// Taxa mínima
+    float taxa = 2.0;// Taxa mÃ­nima
     if (hEstacionado > 3) {
-        // Calcular taxa adicional
+        //-----Calcular taxa adicional----------------------------
         float hExcedidas = hEstacionado - 3;
         taxa += hExcedidas * 0.5;
-        // Verificar se a taxa excede o máximo de $10,00
+        //-----Verificar se a taxa excede o mÃ¡ximo de $10,00------
         if (taxa > 10.00) {
             taxa = 10.00;
         }
@@ -26,31 +26,31 @@ int main() {
     scanf("%f", &hCliente2);
     printf("Horas estacionadas do cliente 3: ");
     scanf("%f", &hCliente3);
-    // Comparar Horas Exedidas
+    //-----Comparar Horas Exedidas------------------------------------------
     printf("-------------------------------------\n");
     if (hCliente1 < 24){
     	tCliente1 = calculaTaxas(hCliente1);
 	}
     	else {
-		printf("Atenção!! O limite de horas do Cliente 1 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
+		printf("AtenÃ§Ã£o!! O limite de horas do Cliente 1 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
 	}
 	if (hCliente2 < 24) {
 		tCliente2 = calculaTaxas(hCliente2);
 	}
 		else {
-		printf("\nAtenção!! O limite de horas do Cliente 2 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
+		printf("\nAtenÃ§Ã£o!! O limite de horas do Cliente 2 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
 	}
 	if (hCliente3 < 24){
 		tCliente3 = calculaTaxas(hCliente3);
 	}
 		else {
-		printf("\nAtenção!! O limite de horas do Cliente 3 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
+		printf("\nAtenÃ§Ã£o!! O limite de horas do Cliente 3 expirou!! \n Nenhum carro pode ficar mais que 24 horas no estacionamento!");
     }
    	printf("-------------------------------------\n");
-    // Calcular o total recebido no dia
+    //-----Calcular o total recebido no dia-------------------------------------
     totalRecebido = tCliente1 + tCliente2 + tCliente3;
-    // Imprimir a tabela com as taxas de estacionamento
-    printf("\nRelatório de Taxas de Estacionamento\n");
+    //-----Imprimir a tabela com as taxas de estacionamento---------------------
+    printf("\nRelatÃ³rio de Taxas de Estacionamento\n");
     printf("-------------------------------------\n");
     printf("Cliente\tHoras Estacionadas\tTaxa\n");
     printf("-------------------------------------\n");
